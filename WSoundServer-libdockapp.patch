@@ -1,0 +1,22 @@
+--- WSoundServer-0.4.1.orig/configure.in	2001-01-28 17:36:12.000000000 +0100
++++ WSoundServer-0.4.1/configure.in	2004-11-07 19:06:51.635578616 +0100
+@@ -107,8 +107,8 @@
+ dnl =====================
+ LIBDA=""
+ 
+-WS_CHECK_LIB(dockapp, DAInitialize, $X_EXTRA_LIBS -lX11 -lXext -lXpm)
+-if test "x$ac_cv_lib_dockapp_DAInitialize" = xyes; then
++WS_CHECK_LIB(dockapp, DAOpenDisplay, $X_EXTRA_LIBS -lX11 -lXext -lXpm)
++if test "x$ac_cv_lib_dockapp_DAOpenDisplay" = xyes; then
+     WS_CHECK_HEADER(dockapp.h)
+     if test "x$ac_cv_header_dockapp_h" = xyes; then
+     	LIBDA="-ldockapp -lX11 -lXext -lXpm"
+@@ -122,7 +122,7 @@
+    echo "         Please read INSTALL to find where you can find libdockapp,"
+    echo "         and install it first."
+    echo "         If you already have it installed, try using the"
+-   if test "x$ac_cv_lib_dockapp_DAInitialize" != xyes; then
++   if test "x$ac_cv_lib_dockapp_DAOpenDisplay" != xyes; then
+    echo "         --with-libs-from flag to tell configure where the library"
+    echo "	  is installed and"
+    fi
