@@ -29,6 +29,7 @@ Summary:        WSoundServer libraries and headers
 Summary(pl):    Biblioteki i pliki nag³ówkowe dla WSoundServer
 Group:          X11/Development/Libraries
 Group(pl):      X11/Programowanie/Biblioteki
+Requires:	%{name} = %{version}
 
 %description devel
 WSoundServer libraries and headers
@@ -41,6 +42,7 @@ Summary:        WSoundServer static libraries
 Summary(pl):    Biblioteki statyczne dla WSoundServer
 Group:          X11/Development/Libraries
 Group(pl):      X11/Programowanie/Biblioteki
+Requires:	%{name}-devel = %{version}
 
 %description static
 WSoundServer static libraries
