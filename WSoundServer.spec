@@ -88,7 +88,7 @@ Biblioteki statyczne dla WSoundServer.
 
 %build
 rm -f missing
-libtoolize --copy --force
+%{__libtoolize}
 aclocal
 %{__autoconf}
 %{__automake}
