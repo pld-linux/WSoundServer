@@ -32,10 +32,10 @@ Group(pl):      X11/Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
 %description devel
-WSoundServer libraries and headers
+WSoundServer libraries and headers.
 
 %description devel -l pl
-Biblioteki i pliki nag³ówkowe dla WSoundServer
+Biblioteki i pliki nag³ówkowe dla WSoundServer.
 
 %package static
 Summary:        WSoundServer static libraries
@@ -45,10 +45,10 @@ Group(pl):      X11/Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 
 %description static
-WSoundServer static libraries
+WSoundServer static libraries.
 
 %description static -l pl
-Biblioteki statyczne dla WSoundServer
+Biblioteki statyczne dla WSoundServer.
 
 %prep
 %setup -q
