@@ -14,6 +14,7 @@ BuildPrereq:	docklib
 BuildPrereq:	audiofile-devel
 BuildPrereq:	xpm-devel
 BuildPrereq:	XFree86-devel
+BuildPrereq:	WindowMaker-devel
 Requires:	WindowMaker >= 0.60.0
 BuildRoot:   	/tmp/%{name}-%{version}-root
 
