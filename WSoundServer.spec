@@ -8,6 +8,7 @@ Release:	4
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://largo.windowmaker.org/files/%{name}-%{version}.tar.bz2
+# Source0:	aa
 Source1:	%{name}.desktop
 Source2:	%{name}-config
 Patch0:		%{name}-WINGs.patch
