@@ -94,7 +94,7 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure 
+%configure
 
 %{__make}
 
