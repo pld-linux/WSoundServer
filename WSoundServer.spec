@@ -4,7 +4,7 @@ Summary(no):	Window Maker lydtjener
 Summary(pl):	Serwer d¼wiêku dla WindowMakera
 Name:		WSoundServer
 Version:	0.4.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
@@ -90,6 +90,11 @@ Biblioteki statyczne dla WSoundServer.
 %patch1 -p1
 
 %build
+rm -f missing
+libtoolize --copy --force
+aclocal
+autoconf
+automake -a -c
 %configure 
 
 %{__make}
