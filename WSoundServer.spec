@@ -104,7 +104,6 @@ Biblioteki statyczne dla WSoundServer.
 %setup -q -a4
 
 %build
-LDFLAGS="-s"; export LDFLAGS
 %configure 
 
 %{__make}
@@ -124,10 +123,7 @@ install %{SOURCE2}   $RPM_BUILD_ROOT%{_sysconfdir}/WindowMaker/WMSound
 install %{SOURCE3}   $RPM_BUILD_ROOT%{_datadir}/WindowMaker/SoundSets/Default
 install Sounds/*.wav $RPM_BUILD_ROOT%{_datadir}/WindowMaker/Sounds
 
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	README ChangeLog AUTHORS 
+gzip -9nf README ChangeLog AUTHORS 
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
