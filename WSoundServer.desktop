@@ -2,10 +2,11 @@
 Name=WSoundServer
 Comment=WindowMaker Sound Server
 Comment[fr]=Serveur de sons Window Maker
-Comment[pl]=Serwer Dźwięku dla WindowMakera
+Comment[pl]=Serwer dźwięku dla WindowMakera
 Icon=wsoundserver.xpm
 Exec=wsoundserver
 Terminal=false
 Type=Application
 Encoding=UTF-8
+Categories=Audio;
 # vi: encoding=utf-8
