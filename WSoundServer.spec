@@ -98,8 +98,3 @@ rm -rf $RPM_BUILD_ROOT
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
-
-%changelog
-* Mon Jul 05 1999 Piotr Czerwiñski <pius@pld.org.pl> 
-  [0.1.0-1]
-- initial rpm release for PLD use.
