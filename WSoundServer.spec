@@ -139,7 +139,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/wsound*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
-%{_datadir}/pixmaps/wsoundserver.xpm
+%{_pixmapsdir}/wsoundserver.xpm
 %{_applnkdir}/Utilities/%{name}.desktop
 
 %{_mandir}/man1/*
