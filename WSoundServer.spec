@@ -65,11 +65,11 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/pixmaps \
-	$RPM_BUILD_ROOT/etc/X11/applnk/Utilities
+	$RPM_BUILD_ROOT/usr/X11R6/share/applnk/Utilities
 
 make install DESTDIR=$RPM_BUILD_ROOT
 install src/wsoundserver.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/Utilities
+install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/Utilities
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
@@ -90,7 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/lib*.la
 
 %{_datadir}/pixmaps/wsoundserver.xpm
-/etc/X11/applnk/Utilities/WSoundServer.desktop
+/usr/X11R6/share/applnk/Utilities/WSoundServer.desktop
 
 %{_mandir}/man1/*
 
