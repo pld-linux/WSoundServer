@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=WSoundServer
+Comment=WindowMaker Sound Server
+Comment[pl]=Serwer D¼wiêku dla WindowMakera
+Icon=wsoundserver.xpm
+Exec=wsoundserver
+Terminal=0
+Type=Application
