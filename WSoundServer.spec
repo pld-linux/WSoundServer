@@ -17,7 +17,6 @@ Icon:		WSoundServer.xpm
 BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	libdockapp-devel
 BuildRequires:	audiofile-devel >= 0.1.9
-BuildRequires:	xpm-devel
 BuildRequires:	XFree86-devel
 BuildRequires:	WindowMaker-devel
 Requires:	WindowMaker >= 0.60.0
