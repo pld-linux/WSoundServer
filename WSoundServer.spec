@@ -116,7 +116,7 @@ install -d $RPM_BUILD_ROOT%{_applnkdir}/Utilities \
 	$RPM_BUILD_ROOT%{_sysconfdir}/WindowMaker \
 	$RPM_BUILD_ROOT%{_datadir}/{pixmaps,WindowMaker/{SoundSets,Sounds}}
 
-make install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 install src/wsoundserver.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
 
