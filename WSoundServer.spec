@@ -6,7 +6,8 @@ Release:	1
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Copyright:	GPL
-Source:		ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
+Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
+Source1:	WSoundServer.desktop
 Icon:		WSoundServer.xpm
 BuildPrereq:	libPropList-devel >= 0.8.3
 BuildPrereq:	docklib
@@ -54,6 +55,7 @@ Biblioteki statyczne dla WSoundServer.
 %setup -q
 
 %build
+LDFLAGS="-s"; export LDFLAGS
 %configure 
 
 make
@@ -66,6 +68,8 @@ install -d $RPM_BUILD_ROOT%{_datadir}/pixmaps \
 make install-strip DESTDIR=$RPM_BUILD_ROOT
 install src/wsoundserver.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/Utilities
+
+strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
 gzip -9nf README ChangeLog AUTHORS NEWS
 
