@@ -1,0 +1,10 @@
+--- WSoundServer-0.4.0/configure.in.orig	Fri Mar 31 22:10:25 2000
++++ WSoundServer-0.4.0/configure.in	Wed Sep  4 13:24:22 2002
+@@ -212,6 +212,7 @@
+     AC_DEFINE(DRIVER_ESD)
+     driver="DRIVER_ESD"
+ else
++    AM_CONDITIONAL(HAVE_ESD,false)
+     echo "---------------------------------------------------------------------"
+     echo "--- Checking to see which audio header files your system uses.";
+     echo "--- Most of these checks should fail. Do not be alarmed.";
