@@ -1,6 +1,6 @@
 Summary:	WindowMaker sound server
 Summary(fr):	Serveur de son de Window Maker
-Summary(no):	Window Maker lydtjener
+Summary(nb):	Window Maker lydtjener
 Summary(pl):	Serwer d¼wiêku dla WindowMakera
 Name:		WSoundServer
 Version:	0.4.0
@@ -39,7 +39,7 @@ WSoundServer is the sound server for WindowMaker.
 %description -l fr
 WSoundServer est le serveur de son pour Window Maker.
 
-%description -l no
+%description -l nb
 WSoundServer er en lydtjener for Window Maker.
 
 %description -l pl
@@ -47,7 +47,7 @@ WSoundServer jest serwerem d¼wiêku dla WindowMakera.
 
 %package devel
 Summary:	WSoundServer libraries and headers
-Summary(no):	Utviklings bibliotek for WSoundServer
+Summary(nb):	Utviklings bibliotek for WSoundServer
 Summary(fr):	Bibliothèques et includes pour WSoundServer
 Summary(pl):	Biblioteki i pliki nag³ówkowe dla WSoundServer
 Group:		X11/Development/Libraries
@@ -60,7 +60,7 @@ WSoundServer libraries and headers.
 %description devel -l fr
 Bibliothèques et includes pour WSoundServer.
 
-%description devel -l no
+%description devel -l nb
 WSoundServer biblioteket samt «headerfilen».
 
 %description devel -l pl
