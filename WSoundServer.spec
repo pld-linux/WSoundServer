@@ -6,8 +6,8 @@ Release:	1
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Copyright:	GPL
-Icon:		wsoundserver.xpm
 Source:		ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
+Icon:		WSoundServer.xpm
 BuildPrereq:	libPropList-devel >= 0.8.3
 BuildPrereq:	docklib
 BuildPrereq:	audiofile-devel
