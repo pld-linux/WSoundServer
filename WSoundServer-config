@@ -1,8 +1,8 @@
 {
   SoundPath = ("~/GNUstep/Library/WindowMaker/Sounds",
-              "/usr/X11R6/share/WindowMaker/Sounds");
+              "/usr/share/WindowMaker/Sounds");
   SoundSetsPath = ("~/GNUstep/Library/WindowMaker/SoundSets",
-              "/usr/X11R6/share/WindowMaker/SoundSets");
+              "/usr/share/WindowMaker/SoundSets");
   Device = /dev/dsp;
   AppExit = appexit.wav;
   AppStart = appstart.wav;
