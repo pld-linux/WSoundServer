@@ -1,7 +1,7 @@
 Summary:        WindowMaker sound server
 Summary(pl):    Serwer d¼wiêku dla WindowMakera
 Name:		WSoundServer
-Version:	0.1.0
+Version:	0.1.1
 Release:	1
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -11,14 +11,15 @@ Source1:	WSoundServer.desktop
 Icon:		WSoundServer.xpm
 BuildPrereq:	libPropList-devel >= 0.8.3
 BuildPrereq:	docklib
-BuildPrereq:	audiofile-devel
+BuildPrereq:	audiofile-devel >= 0.1.7
 BuildPrereq:	xpm-devel
 BuildPrereq:	XFree86-devel
 BuildPrereq:	WindowMaker-devel
 Requires:	WindowMaker >= 0.60.0
 BuildRoot:   	/tmp/%{name}-%{version}-root
 
-%define _prefix /usr/X11R6
+%define 	_prefix /usr/X11R6
+%define		_mandir	%{_prefix}/man
 
 %description
 WSoundServer is the sound server for WindowMaker.
@@ -66,13 +67,14 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/pixmaps \
 	$RPM_BUILD_ROOT/etc/X11/applnk/Utilities
 
-make install-strip DESTDIR=$RPM_BUILD_ROOT
+make install DESTDIR=$RPM_BUILD_ROOT
 install src/wsoundserver.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/Utilities
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
-gzip -9nf README ChangeLog AUTHORS NEWS
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
+	README ChangeLog AUTHORS 
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
@@ -82,13 +84,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,ChangeLog,AUTHORS,NEWS}.gz
+%doc {README,ChangeLog,AUTHORS}.gz
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 %{_libdir}/lib*.la
 
 %{_datadir}/pixmaps/wsoundserver.xpm
 /etc/X11/applnk/Utilities/WSoundServer.desktop
+
+%{_mandir}/man1/*
 
 %files devel
 %defattr(644,root,root,755)
