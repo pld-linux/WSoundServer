@@ -22,6 +22,9 @@ BuildRequires:	libdockapp-devel
 BuildRequires:	audiofile-devel >= 0.1.9
 BuildRequires:	XFree86-devel
 BuildRequires:	WindowMaker-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 Requires:	WindowMaker >= 0.60.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	wmsound
