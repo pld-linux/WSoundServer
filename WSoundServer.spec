@@ -1,7 +1,7 @@
 Summary:        WindowMaker sound server
 Summary(pl):    Serwer d¼wiêku dla WindowMakera
 Name:		WSoundServer
-Version:	0.2.0
+Version:	0.2.1
 Release:	1
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -11,7 +11,7 @@ Source1:	WSoundServer.desktop
 Icon:		WSoundServer.xpm
 BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	docklib
-BuildRequires:	audiofile-devel >= 0.1.7
+BuildRequires:	audiofile-devel >= 0.1.9
 BuildRequires:	xpm-devel
 BuildRequires:	XFree86-devel
 BuildRequires:	WindowMaker-devel
