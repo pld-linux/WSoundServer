@@ -4,7 +4,7 @@ Summary(no):	Window Maker lydtjener
 Summary(pl):	Serwer d¼wiêku dla WindowMakera
 Name:		WSoundServer
 Version:	0.2.2
-Release:	1
+Release:	2
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Copyright:	GPL
@@ -70,6 +70,7 @@ Summary(pl):	Biblioteki i pliki nag³ówkowe dla WSoundServer
 Group:		X11/Development/Libraries
 Group(pl):	X11/Programowanie/Biblioteki
 Requires:	%{name} = %{version}
+Obsoletes:	wmsound-devel
 
 %description devel
 WSoundServer libraries and headers.
