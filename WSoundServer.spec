@@ -4,7 +4,7 @@ Summary(nb):	Window Maker lydtjener
 Summary(pl):	Serwer d¼wiêku dla WindowMakera
 Name:		WSoundServer
 Version:	0.4.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://largo.windowmaker.org/files/%{name}-%{version}.tar.gz
@@ -25,7 +25,6 @@ BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	libdockapp-devel
 BuildRequires:	libtool
 Requires:	WindowMaker >= 0.60.0
-Requires:	wmsound-data
 Provides:	wmsoundserver
 Obsoletes:	wmsoundserver
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
