@@ -4,10 +4,10 @@ Summary(no):	Window Maker lydtjener
 Summary(pl):	Serwer d¼wiêku dla WindowMakera
 Name:		WSoundServer
 Version:	0.2.2
-Release:	2
+Release:	3
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Copyright:	GPL
+License:	GPL
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
 Source1:	WSoundServer.desktop
 Source2:	WSoundServer-config
@@ -15,7 +15,7 @@ Source3:	WSoundServer-soundset
 Source4:	wmsdefault.tar.gz
 Icon:		WSoundServer.xpm
 BuildRequires:	libPropList-devel >= 0.8.3
-BuildRequires:	docklib
+BuildRequires:	libdockapp-devel
 BuildRequires:	audiofile-devel >= 0.1.9
 BuildRequires:	xpm-devel
 BuildRequires:	XFree86-devel
@@ -28,6 +28,7 @@ BuildRoot:   	/tmp/%{name}-%{version}-root
 %define 	_prefix 	/usr/X11R6
 %define		_mandir		%{_prefix}/man
 %define		_sysconfdir	/etc/X11
+%define		_applnkdir	%{_datadir}/applnk
 
 %description
 WSoundServer is the sound server for WindowMaker.
@@ -112,17 +113,17 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_datadir}/{pixmaps,applnk/Utilities} \
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Utilities \
 	$RPM_BUILD_ROOT%{_sysconfdir}/WindowMaker \
-	$RPM_BUILD_ROOT%{_datadir}/WindowMaker/{SoundSets,Sounds}
+	$RPM_BUILD_ROOT%{_datadir}/{pixmaps,WindowMaker/{SoundSets,Sounds}}
 
 make install DESTDIR=$RPM_BUILD_ROOT
 
 install src/wsoundserver.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/applnk/Utilities
-install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}/WindowMaker/WMSound
-install %{SOURCE3} $RPM_BUILD_ROOT%{_datadir}/WindowMaker/SoundSets/Default
+install %{SOURCE1}   $RPM_BUILD_ROOT%{_applnkdir}/Utilities
+install %{SOURCE2}   $RPM_BUILD_ROOT%{_sysconfdir}/WindowMaker/WMSound
+install %{SOURCE3}   $RPM_BUILD_ROOT%{_datadir}/WindowMaker/SoundSets/Default
 install Sounds/*.wav $RPM_BUILD_ROOT%{_datadir}/WindowMaker/Sounds
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
@@ -146,7 +147,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/lib*.la
 
 %{_datadir}/pixmaps/wsoundserver.xpm
-%{_datadir}/applnk/Utilities/WSoundServer.desktop
+%{_applnkdir}/Utilities/%{name}.desktop
 
 %{_mandir}/man1/*
 
