@@ -144,7 +144,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/setsoundset
 %attr(755,root,root) %{_bindir}/wsound*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
-%{_libdir}/lib*.la
 
 %{_datadir}/pixmaps/wsoundserver.xpm
 %{_applnkdir}/Utilities/%{name}.desktop
