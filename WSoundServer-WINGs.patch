@@ -1,0 +1,12 @@
+diff -Nru WSoundServer-0.4.0/wslib/config.c WSoundServer-0.4.0.new/wslib/config.c
+--- WSoundServer-0.4.0/wslib/config.c	Fri Mar 31 22:10:25 2000
++++ WSoundServer-0.4.0.new/wslib/config.c	Fri Feb 23 04:58:57 2001
+@@ -37,7 +37,7 @@
+ #include <limits.h>
+ #include "wsound.h"
+ 
+-#include <WUtil.h>
++#include <WINGs/WUtil.h>
+ #include <assert.h>
+ 
+ 
