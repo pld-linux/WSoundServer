@@ -15,6 +15,7 @@ Patch0:		%{name}-WINGs.patch
 Patch1:		%{name}-rm_unknown_audiofile_compression.patch
 Patch2:		%{name}-acfix.patch
 Icon:		WSoundServer.xpm
+URL:		http://largo.windowmaker.org/files.php#WSoundServer
 BuildRequires:	WindowMaker-devel
 BuildRequires:	XFree86-devel
 BuildRequires:	audiofile-devel >= 0.1.9
@@ -26,8 +27,8 @@ BuildRequires:	libtool
 Requires:	WindowMaker >= 0.60.0
 Requires:	wmsound-data
 Provides:	wmsoundserver
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	wmsound
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/X11
 
