@@ -9,12 +9,12 @@ Copyright:	GPL
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
 Source1:	WSoundServer.desktop
 Icon:		WSoundServer.xpm
-BuildPrereq:	libPropList-devel >= 0.8.3
-BuildPrereq:	docklib
-BuildPrereq:	audiofile-devel >= 0.1.7
-BuildPrereq:	xpm-devel
-BuildPrereq:	XFree86-devel
-BuildPrereq:	WindowMaker-devel
+BuildRequires:	libPropList-devel >= 0.8.3
+BuildRequires:	docklib
+BuildRequires:	audiofile-devel >= 0.1.7
+BuildRequires:	xpm-devel
+BuildRequires:	XFree86-devel
+BuildRequires:	WindowMaker-devel
 Requires:	WindowMaker >= 0.60.0
 BuildRoot:   	/tmp/%{name}-%{version}-root
 
