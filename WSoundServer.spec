@@ -23,12 +23,11 @@ BuildRequires:	WindowMaker-devel
 Requires:	WindowMaker >= 0.60.0
 Requires:	WSoundServer-data
 Obsoletes:	wmsound
-BuildRoot:   	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix 	/usr/X11R6
 %define		_mandir		%{_prefix}/man
 %define		_sysconfdir	/etc/X11
-%define		_applnkdir	%{_datadir}/applnk
 
 %description
 WSoundServer is the sound server for WindowMaker.
