@@ -108,13 +108,13 @@ install -d $RPM_BUILD_ROOT{%{_applnkdir}/Utilities,%{_pixmapsdir}} \
 
 install src/wsoundserver.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
 
-install %{SOURCE1}   $RPM_BUILD_ROOT%{_applnkdir}/Utilities
-install %{SOURCE2}   $RPM_BUILD_ROOT%{_sysconfdir}/WindowMaker/WMSound
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities
+install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}/WindowMaker/WMSound
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post   -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %files
