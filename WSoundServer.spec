@@ -1,12 +1,12 @@
 Summary:        WindowMaker sound server
 Summary(pl):    Serwer d¼wiêku dla WindowMakera
 Name:		WSoundServer
-Version:	0.1.1
+Version:	0.1.2
 Release:	1
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Copyright:	GPL
-Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.bz2
+Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.gz
 Source1:	WSoundServer.desktop
 Icon:		WSoundServer.xpm
 BuildRequires:	libPropList-devel >= 0.8.3
@@ -64,12 +64,11 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_datadir}/pixmaps \
-	$RPM_BUILD_ROOT/usr/X11R6/share/applnk/Utilities
+install -d $RPM_BUILD_ROOT%{_datadir}/{pixmaps,applnk/Utilities}
 
 make install DESTDIR=$RPM_BUILD_ROOT
 install src/wsoundserver.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
-install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/Utilities
+install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/applnk/Utilities
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
@@ -90,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/lib*.la
 
 %{_datadir}/pixmaps/wsoundserver.xpm
-/usr/X11R6/share/applnk/Utilities/WSoundServer.desktop
+%{_datadir}/applnk/Utilities/WSoundServer.desktop
 
 %{_mandir}/man1/*
 
