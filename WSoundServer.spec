@@ -29,8 +29,6 @@ Provides:	wmsoundserver
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	wmsound
 
-%define 	_prefix 	/usr/X11R6
-%define		_mandir		%{_prefix}/man
 %define		_sysconfdir	/etc/X11
 
 %description
@@ -51,7 +49,7 @@ Summary(nb):	Utviklings bibliotek for WSoundServer
 Summary(fr):	Bibliothèques et includes pour WSoundServer
 Summary(pl):	Biblioteki i pliki nag³ówkowe dla WSoundServer
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Obsoletes:	wmsound-devel
 
 %description devel
@@ -71,7 +69,7 @@ Summary:	WSoundServer static libraries
 Summary(fr):	Bibliothèques statiques pour WSoundServer
 Summary(pl):	Biblioteki statyczne dla WSoundServer
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 WSoundServer static libraries.
@@ -89,7 +87,6 @@ Biblioteki statyczne dla WSoundServer.
 %patch2 -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
@@ -100,7 +97,7 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Utilities,%{_pixmapsdir}} \
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}} \
 	$RPM_BUILD_ROOT%{_sysconfdir}/WindowMaker
 
 %{__make} install \
@@ -108,7 +105,7 @@ install -d $RPM_BUILD_ROOT{%{_applnkdir}/Utilities,%{_pixmapsdir}} \
 
 install src/wsoundserver.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}/WindowMaker/WMSound
 
 %clean
@@ -127,7 +124,7 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/WindowMaker/WMSound
 
 %{_pixmapsdir}/wsoundserver.xpm
-%{_applnkdir}/Utilities/%{name}.desktop
+%{_desktopdir}/%{name}.desktop
 
 %{_mandir}/man1/*
 
