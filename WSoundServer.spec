@@ -1,10 +1,10 @@
-Summary:        WindowMaker sound server
+Summary:	WindowMaker sound server
 Summary(fr):	Serveur de son de Window Maker
 Summary(no):	Window Maker lydtjener
-Summary(pl):    Serwer d¼wiêku dla WindowMakera
+Summary(pl):	Serwer d¼wiêku dla WindowMakera
 Name:		WSoundServer
-Version:	0.2.1
-Release:	2
+Version:	0.2.2
+Release:	1
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Copyright:	GPL
@@ -21,6 +21,8 @@ BuildRequires:	xpm-devel
 BuildRequires:	XFree86-devel
 BuildRequires:	WindowMaker-devel
 Requires:	WindowMaker >= 0.60.0
+Requires:	WSoundServer-data
+Obsoletes:	wmsound
 BuildRoot:   	/tmp/%{name}-%{version}-root
 
 %define 	_prefix 	/usr/X11R6
@@ -40,34 +42,33 @@ WSoundServer er en lydtjener for Window Maker.
 WSoundServer jest serwerem d¼wiêku dla WindowMakera.
 
 %package data
-Summary:        WSoundSerer data
-Summary(fr):    Données de WSoundServer
-Summary(no):    Data til WSoundServer
-Summary(pl):    Pliki z danymi dla WSoundServer
-Group:          X11/Window Managers/Tools
-Group(pl):      X11/Zarz±dcy Okien/Narzêdzia
-Requires:       %{name} = %{version}
+Summary:	WSoundServer data
+Summary(fr):	Données de WSoundServer
+Summary(no):	Data til WSoundServer
+Summary(pl):	Pliki z danymi dla WSoundServer
+Group:		X11/Window Managers/Tools
+Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Obsoletes:	wmsound-data
 
 %description data
-The standard WSoundSerer data.
+The standard WSoundServer data.
 
 %description data -l fr
-Les données standard de WSoundSerer.
+Les données standard de WSoundServer.
 
 %description data -l no
-Standard datafiler til WSoundSerer.
+Standard datafiler til WSoundServer.
 
 %description data -l pl
-Pliki z danymi dla WSoundSerer.
+Standardowe pliki d¼wiêkowe dla WSoundServer.
 
 %package devel
-Summary:        WSoundServer libraries and headers
+Summary:	WSoundServer libraries and headers
 Summary(no):	Utviklings bibliotek for WSoundServer
 Summary(fr):	Bibliothèques et includes pour WSoundServer
-Summary(pl):    Biblioteki i pliki nag³ówkowe dla WSoundServer
-Group:          X11/Development/Libraries
-Group(pl):      X11/Programowanie/Biblioteki
+Summary(pl):	Biblioteki i pliki nag³ówkowe dla WSoundServer
+Group:		X11/Development/Libraries
+Group(pl):	X11/Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
 %description devel
@@ -83,11 +84,11 @@ WSoundServer biblioteket samt «headerfilen».
 Biblioteki i pliki nag³ówkowe dla WSoundServer.
 
 %package static
-Summary:        WSoundServer static libraries
-Summary(fr):    Bibliothèques statiques pour WSoundServer
-Summary(pl):    Biblioteki statyczne dla WSoundServer
-Group:          X11/Development/Libraries
-Group(pl):      X11/Programowanie/Biblioteki
+Summary:	WSoundServer static libraries
+Summary(fr):	Bibliothèques statiques pour WSoundServer
+Summary(pl):	Biblioteki statyczne dla WSoundServer
+Group:		X11/Development/Libraries
+Group(pl):	X11/Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 
 %description static
