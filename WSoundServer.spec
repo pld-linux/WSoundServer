@@ -121,7 +121,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/setsoundset
 %attr(755,root,root) %{_bindir}/wsound*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/WindowMaker/WMSound
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/WindowMaker/WMSound
 
 %{_pixmapsdir}/wsoundserver.xpm
 %{_desktopdir}/%{name}.desktop
