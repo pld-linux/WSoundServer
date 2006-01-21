@@ -14,7 +14,6 @@ Source2:	%{name}-config
 Patch0:		%{name}-libdockapp.patch
 Patch1:		%{name}-rm_unknown_audiofile_compression.patch
 Patch2:		%{name}-acfix.patch
-Icon:		WSoundServer.xpm
 URL:		http://largo.windowmaker.org/files.php#WSoundServer
 BuildRequires:	WindowMaker-devel
 BuildRequires:	XFree86-devel
