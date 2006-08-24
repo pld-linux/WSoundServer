@@ -24,6 +24,7 @@ BuildRequires:	esound-devel
 BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	libdockapp-devel
 BuildRequires:	libtool
+BuildRequires:	xorg-proto-xproto-devel
 Requires:	WindowMaker >= 0.60.0
 Provides:	wmsoundserver
 Obsoletes:	wmsoundserver
