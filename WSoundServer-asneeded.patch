@@ -1,0 +1,11 @@
+--- WSoundServer-0.4.1.orig/wslib/Makefile.am	2000-03-31 22:10:25.000000000 +0200
++++ WSoundServer-0.4.1/wslib/Makefile.am	2006-08-24 12:23:03.000000000 +0200
+@@ -40,7 +40,7 @@
+ LIBLIST = libwsound.la libwsoundeffect.la -L../wseffectlib/ @LIBRARY_SEARCH_PATH@ @XLIBS@
+ 
+ 
+-libwsound_la_LIBADD =
++libwsound_la_LIBADD = @LIBPL@ @XLIBS@
+ 
+ CLEANFILES = 
+ 
