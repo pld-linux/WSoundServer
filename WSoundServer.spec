@@ -4,7 +4,7 @@ Summary(nb):	Window Maker lydtjener
 Summary(pl):	Serwer d¼wiêku dla WindowMakera
 Name:		WSoundServer
 Version:	0.4.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://largo.windowmaker.org/files/%{name}-%{version}.tar.gz
@@ -14,12 +14,13 @@ Source2:	%{name}-config
 Patch0:		%{name}-libdockapp.patch
 Patch1:		%{name}-rm_unknown_audiofile_compression.patch
 Patch2:		%{name}-acfix.patch
+Patch3:		%{name}-asneeded.patch
 URL:		http://largo.windowmaker.org/files.php#WSoundServer
 BuildRequires:	WindowMaker-devel
-BuildRequires:	XFree86-devel
 BuildRequires:	audiofile-devel >= 0.1.9
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	esound-devel
 BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	libdockapp-devel
 BuildRequires:	libtool
@@ -84,6 +85,7 @@ Biblioteki statyczne dla WSoundServer.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 %{__libtoolize}
