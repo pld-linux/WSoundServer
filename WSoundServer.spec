@@ -1,7 +1,7 @@
 Summary:	WindowMaker sound server
-Summary(fr.UTF-8):   Serveur de son de Window Maker
-Summary(nb.UTF-8):   Window Maker lydtjener
-Summary(pl.UTF-8):   Serwer dźwięku dla WindowMakera
+Summary(fr.UTF-8):	Serveur de son de Window Maker
+Summary(nb.UTF-8):	Window Maker lydtjener
+Summary(pl.UTF-8):	Serwer dźwięku dla WindowMakera
 Name:		WSoundServer
 Version:	0.4.1
 Release:	3
@@ -46,9 +46,9 @@ WSoundServer jest serwerem dźwięku dla WindowMakera.
 
 %package devel
 Summary:	WSoundServer libraries and headers
-Summary(nb.UTF-8):   Utviklings bibliotek for WSoundServer
-Summary(fr.UTF-8):   Bibliothèques et includes pour WSoundServer
-Summary(pl.UTF-8):   Biblioteki i pliki nagłówkowe dla WSoundServer
+Summary(nb.UTF-8):	Utviklings bibliotek for WSoundServer
+Summary(fr.UTF-8):	Bibliothèques et includes pour WSoundServer
+Summary(pl.UTF-8):	Biblioteki i pliki nagłówkowe dla WSoundServer
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	wmsound-devel
@@ -67,8 +67,8 @@ Biblioteki i pliki nagłówkowe dla WSoundServer.
 
 %package static
 Summary:	WSoundServer static libraries
-Summary(fr.UTF-8):   Bibliothèques statiques pour WSoundServer
-Summary(pl.UTF-8):   Biblioteki statyczne dla WSoundServer
+Summary(fr.UTF-8):	Bibliothèques statiques pour WSoundServer
+Summary(pl.UTF-8):	Biblioteki statyczne dla WSoundServer
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
