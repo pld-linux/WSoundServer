@@ -1,7 +1,7 @@
 Summary:	WindowMaker sound server
-Summary(fr):	Serveur de son de Window Maker
-Summary(nb):	Window Maker lydtjener
-Summary(pl):	Serwer d¼wiêku dla WindowMakera
+Summary(fr.UTF-8):   Serveur de son de Window Maker
+Summary(nb.UTF-8):   Window Maker lydtjener
+Summary(pl.UTF-8):   Serwer dÅºwiÄ™ku dla WindowMakera
 Name:		WSoundServer
 Version:	0.4.1
 Release:	3
@@ -35,20 +35,20 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 WSoundServer is the sound server for WindowMaker.
 
-%description -l fr
+%description -l fr.UTF-8
 WSoundServer est le serveur de son pour Window Maker.
 
-%description -l nb
+%description -l nb.UTF-8
 WSoundServer er en lydtjener for Window Maker.
 
-%description -l pl
-WSoundServer jest serwerem d¼wiêku dla WindowMakera.
+%description -l pl.UTF-8
+WSoundServer jest serwerem dÅºwiÄ™ku dla WindowMakera.
 
 %package devel
 Summary:	WSoundServer libraries and headers
-Summary(nb):	Utviklings bibliotek for WSoundServer
-Summary(fr):	Bibliothèques et includes pour WSoundServer
-Summary(pl):	Biblioteki i pliki nag³ówkowe dla WSoundServer
+Summary(nb.UTF-8):   Utviklings bibliotek for WSoundServer
+Summary(fr.UTF-8):   BibliothÃ¨ques et includes pour WSoundServer
+Summary(pl.UTF-8):   Biblioteki i pliki nagÅ‚Ã³wkowe dla WSoundServer
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	wmsound-devel
@@ -56,29 +56,29 @@ Obsoletes:	wmsound-devel
 %description devel
 WSoundServer libraries and headers.
 
-%description devel -l fr
-Bibliothèques et includes pour WSoundServer.
+%description devel -l fr.UTF-8
+BibliothÃ¨ques et includes pour WSoundServer.
 
-%description devel -l nb
-WSoundServer biblioteket samt «headerfilen».
+%description devel -l nb.UTF-8
+WSoundServer biblioteket samt Â«headerfilenÂ».
 
-%description devel -l pl
-Biblioteki i pliki nag³ówkowe dla WSoundServer.
+%description devel -l pl.UTF-8
+Biblioteki i pliki nagÅ‚Ã³wkowe dla WSoundServer.
 
 %package static
 Summary:	WSoundServer static libraries
-Summary(fr):	Bibliothèques statiques pour WSoundServer
-Summary(pl):	Biblioteki statyczne dla WSoundServer
+Summary(fr.UTF-8):   BibliothÃ¨ques statiques pour WSoundServer
+Summary(pl.UTF-8):   Biblioteki statyczne dla WSoundServer
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 WSoundServer static libraries.
 
-%description static -l fr
-Bibliothèques statiques pour WSoundServer.
+%description static -l fr.UTF-8
+BibliothÃ¨ques statiques pour WSoundServer.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne dla WSoundServer.
 
 %prep
