@@ -7,6 +7,5 @@ Icon=wsoundserver
 Exec=wsoundserver
 Terminal=false
 Type=Application
-Encoding=UTF-8
 Categories=Audio;
 # vi: encoding=utf-8
