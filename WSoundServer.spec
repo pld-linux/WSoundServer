@@ -4,7 +4,7 @@ Summary(nb.UTF-8):	Window Maker lydtjener
 Summary(pl.UTF-8):	Serwer dźwięku dla WindowMakera
 Name:		WSoundServer
 Version:	0.4.1
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://largo.windowmaker.org/files/%{name}-%{version}.tar.gz
